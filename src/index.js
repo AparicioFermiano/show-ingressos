@@ -41,12 +41,8 @@ app.post('/clientes/:id/ingressos',async (req, res) => {
     })
     res.status(201).send(ingressosParametro)   
 });
-app.put('/clientes/:id/ingressos', (req,res) => {
 
-    res.status(200).send(ingressosCliente[ingressoId])
-});
-
-app.delete('/clientes/:id/ingressos/:id_ingresso', (req,res) =>{
+app.delete('/clientes/:id/ingressos/', (req,res) =>{
     const { descricao } = req.body
     var ingressoId = req.params.id
     ingressosCliente.forEach((ingresso,index) => {
